@@ -14,15 +14,11 @@ class Plot:
     def __init__(self,name,image):
         self.name = name
         self.image = image
-    
-    def get_data(self):
-        return {"name": self.name, "image": self.image}
-
 
 
 @app.get("/", description="Возвращает информацию о приложении")
 async def read_root():
-    return {"Hello": "World"}
+    return {"Project": "Домашняя работа #4 по прикладному питону.", "Authors": ["Гарасев Никита Алексеевич", "Тишин Роман Вячеславович"]}
 
 @app.get("/ping", description="ping - pong")
 async def ping():
