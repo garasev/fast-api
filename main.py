@@ -44,7 +44,7 @@ async def get_graph(bank_name: str):
     return Plot(target, image)
 
 
-@app.get("/data/{date}", description="Возвращает значение из кеша или считывает из файла с предсказаниями")
+@app.get("/data/{date}", description="Возвращает значение из кеша или считывает из файла с предсказаниями. Диапозон и формат дат: '2023-11-01' - '2023-12-12'")
 async def get_data(date: str):
     global CACHE
 
